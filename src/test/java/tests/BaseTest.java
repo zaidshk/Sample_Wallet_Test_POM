@@ -1,20 +1,17 @@
 package tests;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import utils.DriverUtils;
+import io.appium.java_client.AppiumDriver;
 
 public class BaseTest {
 
-    @BeforeMethod
+    protected AppiumDriver driver;
+
+//Initializing the driver to use it across all the test scripts
+    // This can be useful for Parallel Script execution in future
     public void setUp() {
         DriverUtils.initializeDriver();
-    }
-
-    @AfterMethod
-    public void tearDown(ITestResult result) {
-        DriverUtils.quitDriver();
+        driver = DriverUtils.getDriver();
     }
 
 }

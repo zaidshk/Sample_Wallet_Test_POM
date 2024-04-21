@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-21T06:52:37 GST" name="Sample Suite" finished-at="2024-04-21T06:53:27 GST" duration-ms="49578">
+    <groups>
+    </groups>
+    <test started-at="2024-04-21T06:52:37 GST" name="Wallet Test Suite" finished-at="2024-04-21T06:53:27 GST" duration-ms="49578">
+      <class name="tests.SampleTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:52:37 GST" name="setUp" finished-at="2024-04-21T06:52:44 GST" duration-ms="6212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="walletCreationSkipBackupTest()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:52:44 GST" name="walletCreationSkipBackupTest" description="E2E test for wallet creation scenario with No backup" finished-at="2024-04-21T06:52:52 GST" duration-ms="8155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- walletCreationSkipBackupTest -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:52:52 GST" name="teardown" finished-at="2024-04-21T06:52:52 GST" duration-ms="159" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=walletCreationSkipBackupTest status=SUCCESS method=SampleTest.walletCreationSkipBackupTest()[pri:0, instance:tests.SampleTest@5562c41e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:52:52 GST" name="setUp" finished-at="2024-04-21T06:52:57 GST" duration-ms="4667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="walletCreationInAppTest()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:52:57 GST" name="walletCreationInAppTest" description="Create second wallet from the app" finished-at="2024-04-21T06:53:10 GST" duration-ms="13899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- walletCreationInAppTest -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:53:10 GST" name="teardown" finished-at="2024-04-21T06:53:11 GST" duration-ms="144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=walletCreationInAppTest status=SUCCESS method=SampleTest.walletCreationInAppTest()[pri:0, instance:tests.SampleTest@5562c41e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:53:11 GST" name="setUp" finished-at="2024-04-21T06:53:15 GST" duration-ms="4576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="walletCreationExistingBitcoinTest()[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:53:15 GST" name="walletCreationExistingBitcoinTest" description="Add existing Wallet for Bitcoin" finished-at="2024-04-21T06:53:27 GST" duration-ms="11563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- walletCreationExistingBitcoinTest -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.SampleTest@5562c41e]" started-at="2024-04-21T06:53:27 GST" name="teardown" finished-at="2024-04-21T06:53:27 GST" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=walletCreationExistingBitcoinTest status=SUCCESS method=SampleTest.walletCreationExistingBitcoinTest()[pri:0, instance:tests.SampleTest@5562c41e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.SampleTest -->
+    </test> <!-- Wallet Test Suite -->
+  </suite> <!-- Sample Suite -->
+</testng-results>

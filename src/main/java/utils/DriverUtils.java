@@ -7,33 +7,31 @@ import java.net.URL;
 
 public class DriverUtils {
 
-    private static AppiumDriver driver;
+    private static ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
 
+    //Desirecapabilities
     public static void initializeDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/apps/android/androidAPP.apk");
+        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/main/java/utils/v8.7.1_release.apk");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Pixel3A");
+        capabilities.setCapability("deviceName", "Pixel_6_API_30");
         capabilities.setCapability("automationName", "UiAutomator2");
 
         try {
-            driver = new AppiumDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);
+            driver.set(new AppiumDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities));
         } catch (MalformedURLException e) {
             throw new RuntimeException("Appium server URL is invalid", e);
         }
     }
 
     public static AppiumDriver getDriver() {
-        if (driver == null) {
-            throw new IllegalStateException("Driver not initialized. Please call initializeDriver first.");
-        }
-        return driver;
+        return driver.get();
     }
 
     public static void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
         }
     }
 }
